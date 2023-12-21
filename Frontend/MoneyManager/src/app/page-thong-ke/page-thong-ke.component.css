@@ -1,0 +1,257 @@
+body {
+  font-family: 'courier', arial, helvetica;
+  box-sizing: border-box;
+
+}
+
+* {
+
+  list-style: none;
+  text-decoration: none;
+}
+
+.loading {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.516);
+}
+
+.loading img {
+  width: 10rem;
+}
+.header{
+
+  width: 100%;
+  height: 60px;
+  background-color: #EEEEEE;
+
+  border-bottom: 1px rgb(95, 92, 92) solid;
+
+
+
+}
+.header button i{
+  padding-right: 10px;
+}
+.header button{
+
+  float: right;
+  border: 1px whitesmoke solid;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-top: 15px ;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  width: 250px;
+
+
+
+}
+
+
+
+header{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+
+}
+
+header img:hover {
+  cursor: pointer;
+
+}
+
+.col-md-2{
+  height: 100vh;
+  border-right: 1px black solid;
+  background-color: #EEEEEE;
+}
+.menu ul{
+  padding-left: 0;
+
+
+}
+.menu li{
+  line-height: 65px;
+
+}
+.menu li a{
+  color: brown;
+  font-size: 25px;
+  text-decoration: none;
+  padding-left: 60px;
+}
+.menu li a i{
+  padding-right: 10px;
+}
+.menu li:hover {
+ color: rgb(255, 255, 255);
+  background-color: green;
+  text-decoration: none;
+}
+
+.footer a {
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  color: rgb(10, 10, 10);
+  font-size: 20px;
+  padding-left: 100px;
+  display: block;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  text-decoration: none;
+
+}
+
+.footer a i {
+  padding-left: 10px;
+}
+
+.footer :hover {
+  text-decoration: none;
+  color: red;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.sogiaodich{
+  width: 100%;
+}
+/*css center*/
+.center {
+  float: left;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(222, 222, 222);
+  /* display: none; */
+
+}
+.center h1{
+  padding-top: 30px;
+  padding-left: 100px;
+}
+.thuchi {
+
+  display: grid;
+  margin-top: 30px;
+  align-content: center;
+  /*can giua theo chieu ngang */
+  justify-content: center;
+  /* text-align: center; */
+}
+
+.thuchi ul {
+  display: flex;
+
+}
+
+.thuchi ul li.sodu{
+  line-height: 100px;
+  width: 300px;
+  border-top: 1px black solid ;
+  border-bottom: 1px black solid ;
+  border-right: 1px black solid ;
+  border-left: 10px green solid ;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.thuchi ul li.khoanthu{
+  line-height: 100px;
+  width: 300px;
+  border-top: 1px black solid ;
+  border-bottom: 1px black solid ;
+  border-right: 1px black solid ;
+  border-left: 10px yellow solid ;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.thuchi ul li.khoanchi{
+  line-height: 100px;
+  width: 300px;
+  border-top: 1px black solid ;
+  border-bottom: 1px black solid ;
+  border-right: 1px black solid ;
+  border-left: 10px red solid ;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.thuchi .left{
+ text-align: center;
+  float: left;
+  width: 40%;
+  justify-content: center;
+
+}
+.thuchi .right{
+  float: left;
+  width: 60%;
+  padding-top: 20px;
+}
+.selected{
+  padding-left: 20px;
+}
+/* leftconten */
+
+.banggiaodich{
+width: 100%;
+
+}
+.banggiaodich h4{
+  padding-left: 20px;
+}
+
+.chart-container {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.bieudo{
+  padding-top: 30px;
+}
+.themgiaodich{
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.516);
+  /* float: left;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+*/
+}
+.form_add_giaodich{
+  width: 500px;
+  background-color: white;
+  height: 600px;
+  border: 1px rgb(195, 183, 183) solid;
+  border-radius: 10px;
+}

@@ -1,0 +1,88 @@
+<div class="themgiaodich" id="themgiaodich">
+  <form [formGroup]="newForm" (ngSubmit)="btn_Save()">
+    <div class="form_add_giaodich">
+      <div class="row mt-3 mb-3">
+        <h3 style="padding-left: 160px;"> Sửa giao dịch</h3>
+      </div>
+
+      <div class="row ml-3 mt-2">
+        <div>
+          <label for="nhom">Chọn nhóm: </label>
+          <br>
+          <select class="form-control" id="nhom" name="giaodich" formControlName="nhomgd">
+            <option value="khoanchi">Khoản Chi</option>
+            <option value="khoanthu">Khoản Thu</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row ml-3 mt-2">
+        <div [ngSwitch]="newForm.get('nhomgd')?.value">
+          <div *ngSwitchCase="'khoanchi'">
+            <label for="tenkhoanchi">Loại khoản chi:</label>
+            <br>
+            <select class="form-control" id="tenkhoanchi" formControlName="tengd">
+              <option value="" selected></option>
+              <option value="anuong">Ăn uống</option>
+              <option value="hoadon">Hóa đơn</option>
+              <option value="muasam">Mua sắm</option>
+              <option value="giadinh">Gia Đình</option>
+              <option value="khac">Khác..</option>
+            </select>
+          </div>
+          <div *ngSwitchCase="'khoanthu'">
+            <label for="tenkhoanthu">Loại khoản thu:</label>
+            <select class="form-control" id="tenkhoanthu" formControlName="tengd">
+              <option value="" selected></option>
+              <option value="luong">Lương</option>
+              <option value="thunhapkhac">Thu nhập khác</option>
+              <option value="tienchuyenden">Tiền chuyển đến</option>
+              <option value="thulai">Thu lãi</option>
+              <option value="khac">Khác..</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-6 ml-3 mt-2">
+          <label for="datepicker">Ngày:</label>
+          <br>
+          <input type="date" id="datepicker" name="Date" width="auto" formControlName="ngaygd">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 ml-3 mt-2">
+          <label for="datepicker">Thời gian:</label>
+          <br>
+          <input type="time" id="timepicker" name="Date" width="auto" formControlName="thoigiangd">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 ml-3 mt-2">
+          <label for="sotien">Nhập số tiền VNĐ:</label>
+          <input  id="sotien" class="form-control form-control-sm" value=""  formControlName="sotiengd">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col ml-3 mt-3 mr-3">
+          <label for="ghichu">Thêm ghi chú:</label>
+          <textarea class="form-control" id="ghichu" rows="3" formControlName="ghichu"></textarea>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center mt-3">
+        <div class="col-md-auto">
+          <button type="submit" class="btn btn-success">Lưu</button>
+        </div>
+        <div class="col-md-auto">
+          <button (click)="btn_back()" type="button" class="btn btn-danger">Trở lại</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

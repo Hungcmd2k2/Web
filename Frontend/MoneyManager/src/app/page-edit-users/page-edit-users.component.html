@@ -1,0 +1,62 @@
+<div class="fullscreen">
+  <!-- Content here -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col  bg-white " style="border-top-right-radius: 20px;border-bottom-left-radius: 20px">
+        <div class="row-sm text-center mt-4 ">
+          <h1>Tài Khoản</h1>
+        </div>
+        <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col mb-3">
+              <label class="h5">Họ Và Tên</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="Nguyễn Văn A">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <label class="h5">Số Điện Thoại</label>
+              <input type="text" class="form-control" formControlName="phonenumber" placeholder="+84...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <label class="h5">Email</label>
+              <input type="text" class="form-control" formControlName="email" placeholder="abc@gmail.com">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-3">
+              <label class="h5">Địa Chỉ</label>
+              <input type="text" class="form-control" formControlName="address" placeholder="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm mb-3">
+              <label class="h5">Tài Khoản</label>
+              <input type="text" class="form-control" formControlName="username" placeholder="">
+            </div>
+          </div>
+
+          <div class="row-sm mb-3 ">
+            <label class="h5">Mật khẩu</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="">
+
+          </div>
+
+          <div class="row justify-content-md-center mt-2 mb-3">
+            <div class="col-md-auto">
+              <button  type="submit" class="btn btn-success">Lưu</button>
+            </div>
+            <div class="col-md-auto">
+              <button routerLink="/Users" class="btn btn-danger">Trở lại</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

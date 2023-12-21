@@ -1,0 +1,29 @@
+body{
+  box-sizing:border-box;
+  font-family:'courier',arial,helvetica;
+}
+
+
+.fullscreen{
+  background-color: #BDBDBD;
+  height: 100vh;
+  display: grid;
+
+  align-content: center;/* Căn giữa chiều dọc */
+}
+
+.loading {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.516);
+}
+.loading img{
+ width:10rem;
+
+}
+

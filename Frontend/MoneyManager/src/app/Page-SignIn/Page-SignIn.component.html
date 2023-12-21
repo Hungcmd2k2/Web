@@ -1,0 +1,80 @@
+<div class="loading" id="loadingpage" >
+  <img src="assets/Image/loading.gif" alt="" />
+</div>
+<div class="fullscreen">
+  <!-- Content here -->
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <img src="assets/Image/Image_Login.jpg" class="" style="
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+        " alt="img_error" />
+          </div>
+
+          <div class="col bg-white" style="
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      ">
+              <div class="row-sm text-center mt-5 mb-3">
+                  <h1>Đăng Nhập</h1>
+              </div>
+              <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                  <div class="col-sm mb-3">
+                      <label class="h5">Tài Khoản</label>
+                      <input type="text" class="form-control" formControlName="username" placeholder="" />
+                  </div>
+              </div>
+
+              <div class="row-sm mb-3">
+                  <label class="h5">Mật khẩu</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="" />
+              </div>
+              <div class="row-sm mb-3 ml-4">
+                  <input type="checkbox" class="form-check-input" id="" placeholder="" />
+                  <label class="h6"> Remember me! </label>
+              </div>
+              <div class="row-sm mb-4 text-md-center">
+                  <button   type="submit" class="btn btn-success btn-lg">
+                      Đăng Nhập
+                  </button>
+              </div>
+            </form>
+              <div class="row-sm text-center mb-5">
+                  <h5>
+                      Bạn chưa có tài khoản?
+                      <a href="#" (click)="btn_SignUp()" class="text-success">Đăng ký</a>
+                  </h5>
+              </div>
+
+
+              <div class="row-sm text-center mb-5">
+                  <h5>-- HOẶC --</h5>
+              </div>
+
+              <div class="row">
+                  <div class="col text-right ">
+                      <a href="#">
+                          <span style="font-size: 20px; color: rgb(27, 172, 27);">
+                              <i class="fa-brands fa-google fa-2xl "></i>
+                          </span>
+
+                      </a>
+
+                  </div>
+
+                  <div class="col">
+                      <a href="#"  >
+                          <span style="font-size: 20px; color: rgb(27, 172, 27);">
+                              <i class="fa-brands fa-facebook fa-2xl"></i>
+                          </span>
+
+                      </a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+

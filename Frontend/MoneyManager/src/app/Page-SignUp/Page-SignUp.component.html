@@ -1,0 +1,70 @@
+<div class="loading" id="loadingpage">
+  <img src="assets/Image/loading.gif" alt="">
+</div>
+<div class="fullscreen">
+  <!-- Content here -->
+  <div class="container ">
+      <div class="row ">
+          <div class="col pt-5">
+
+              <img src="assets/Image/Image_SignUp.jpg" class=""
+                  style="border-top-left-radius: 20px;border-bottom-left-radius: 20px;" alt="img_error">
+          </div>
+
+          <div class="col  bg-white " style="border-top-right-radius: 20px;border-bottom-left-radius: 20px">
+              <div class="row-sm text-center mt-4 ">
+                  <h1>Đăng Ký</h1>
+              </div>
+              <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                  <div class="col mb-3">
+                      <label class="h5">Họ Và Tên</label>
+                      <input type="text" class="form-control" formControlName="name" placeholder="Nguyễn Văn A">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col mb-3">
+                      <label class="h5">Số Điện Thoại</label>
+                      <input type="text" class="form-control" formControlName="phonenumber" placeholder="+84...">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col mb-3">
+                      <label class="h5">Email</label>
+                      <input type="text" class="form-control" formControlName="email" placeholder="abc@gmail.com">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col mb-3">
+                      <label class="h5">Địa Chỉ</label>
+                      <input type="text" class="form-control" formControlName="address" placeholder="">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm mb-3">
+                      <label class="h5">Tài Khoản</label>
+                      <input type="text" class="form-control" formControlName="username" placeholder="">
+                  </div>
+              </div>
+
+              <div class="row-sm mb-3 ">
+                  <label class="h5">Mật khẩu</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="">
+
+              </div>
+
+              <div class="row-sm mb-4 text-md-center">
+                  <button  type="submit" class="btn btn-success btn-lg">Đăng Ký</button>
+              </div>
+
+              <div class="row-sm text-center mb-5">
+                  <h5>Bạn đã có tài khoản? <a href="#" (click)="btn_SignIn()"  class="text-success">Đăng Nhập</a></h5>
+
+              </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,25 @@
+.themgiaodich{
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.516);
+  /* float: left;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+*/
+}
+.form_add_giaodich{
+  width: 500px;
+  background-color: white;
+  height: 650px;
+  border: 1px rgb(195, 183, 183) solid;
+  border-radius: 10px;
+}

@@ -1,0 +1,156 @@
+<div class="loading" id="loadingpage">
+  <img src="assets/Image/loading.gif" alt="" />
+</div>
+
+<div class="row ">
+  <div class="col-md-2 pr-0 ">
+
+    <header ><img src="assets/Image/Image_avatar.jpg" alt=""></header>
+    <div class="menu">
+      <ul>
+        <li><a (click)="reloadGiaodich()" href="#"> <i class="fa-solid fa-house"></i>Quản lí giao dịch</a> </li>
+        <li><a (click)="btn_thongke()" href=""> <i class="fa-solid fa-chart-column"></i> Thống kê</a> </li>
+        <li><a  href="#"> <i class="fa-solid fa-gear"></i> Cài Đặt </a> </li>
+        <li><a href="#"> <i class="fa-solid fa-phone"></i> Hỗ Trợ </a> </li>
+        <li id="hidenli"><a routerLink="/Users"> <i class="fa-solid fa-plus"></i> Quản lí User </a> </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <a href="#" (click)="btn_Out()"><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>Thoát</a>
+    </div>
+  </div>
+
+  <div class="col-md-10 ">
+    <div class="row">
+      <div class="header">
+        <div class="username">
+          <span style="color: blue; font-size: 20px;float: left;padding-right:5px ;">
+            Xin chào
+          </span>
+          <div style="float: left; " *ngIf="user_information">
+            {{ user_information.name }}
+          </div>
+
+          <span style="color: green; font-size: 20px; padding-left: 3px;">!</span>
+        </div>
+
+        <button (click)="btn_AddGD()" type="button"> <i class="fa-solid fa-plus"></i>THÊM GIAO
+          DỊCH</button>
+      </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <div class="row">
+      <div class="sogiaodich" id="center">
+
+        <div class="thuchi">
+          <ul>
+            <li class="sodu">
+              <div class="left">
+                <i
+                  style="cursor: pointer;"
+                  (click)="AddMoney()"
+                  class="fa-solid fa-wallet fa-2xl"
+                  [ngStyle]="{'color': isButtonDisabled ? 'black' : 'red', 'pointer-events': isButtonDisabled ? 'none' : 'auto'}"
+                ></i>
+              </div>
+              <div class="right">
+                <h4 (click)="Suasodu()" style="color:green;cursor: pointer;">Số dư ví</h4>
+                <div *ngFor="let item of money">
+                  <h5>{{ item.sodu }} VND</h5>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="khoanthu">
+              <div class="left">
+                <i class="fa-solid fa-sack-dollar fa-2xl"></i>
+              </div>
+              <div class="right">
+                <h4 style="color:rgb(192, 192, 27);">Khoản Thu</h4>
+                <div *ngFor="let item of money">
+                  <h5>{{ item.khoanthu }} VND</h5>
+                </div>
+              </div>
+            </li>
+            <li class="khoanchi">
+              <div class="left">
+                <i class="fa-solid fa-hand-holding-dollar fa-2xl"></i>
+              </div>
+              <div class="right">
+                <h4 style="color:red">Khoản Chi</h4>
+                <div *ngFor="let item of money">
+                  <h5>{{ item.khoanchi }} VND</h5>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <div class="row">
+      <div class="selected" style="width: 165px; margin-top: 30px; margin-bottom: 20px;">
+        <select class="form-control" aria-label="Default select example" (change)="onSelectChange($event)">
+          <option value="3">Tìm kiếm</option>
+          <option value="0">Tháng Này</option>
+          <option value="1">Tháng Trước</option>
+          <option value="2">Tuần này</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="banggiaodich">
+        <h4> Giao dịch gần đây</h4>
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">Mã GD</th>
+              <th scope="col">Nhóm GD</th>
+              <th scope="col">Tên GD</th>
+              <th scope="col">Ngày GD</th>
+              <th scope="col">Thời Gian GD</th>
+              <th scope="col">Số tiền GD</th>
+              <th scope="col">Ghi Chú</th>
+              <th scope="col">Hành Động</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let giaodich of giaodich ">
+              <td>{{ giaodich.magd }}</td>
+              <td>{{ giaodich.nhomgd }}</td>
+              <td>{{ giaodich.tengd }}</td>
+              <td>{{ giaodich.ngaygd }}</td>
+              <td>{{ giaodich.thoigiangd }}</td>
+              <td>{{ giaodich.sotiengd }}</td>
+              <td>{{ giaodich.ghichu }}</td>
+
+              <td>
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis  fa-2xl"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"
+                        (click)="onUpdateGiaodich(giaodich.magd,giaodich.nhomgd,giaodich.tengd,giaodich.ngaygd,giaodich.thoigiangd,giaodich.sotiengd,giaodich.ghichu,giaodich.userid)"><i
+                          class="fa-solid fa-pen-nib pr-3"></i>Sửa</a></li>
+                    <li><a class="dropdown-item" href="#" (click)="onDeleteGiaodich(giaodich.magd)"><i
+                          class="fa-solid fa-trash pr-3"></i>Xoá</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>

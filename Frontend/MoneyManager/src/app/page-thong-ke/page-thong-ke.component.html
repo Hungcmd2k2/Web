@@ -1,0 +1,46 @@
+<div class="loading" id="loadingpage">
+  <img src="assets/Image/loading.gif" alt="" />
+</div>
+
+<div class="row ">
+  <div class="col-md-2 pr-0 ">
+
+    <header><img src="assets/Image/Image_avatar.jpg" alt=""></header>
+    <div class="menu">
+      <ul>
+        <li><a routerLink="/HomePage"> <i class="fa-solid fa-house"></i>Quản lí giao dịch</a> </li>
+        <li><a (click)="Thongke()" href=""> <i class="fa-solid fa-chart-column"></i> Thống kê</a> </li>
+        <li><a href="#"> <i class="fa-solid fa-gear"></i> Cài Đặt </a> </li>
+        <li><a  > <i class="fa-solid fa-phone"></i> Hỗ Trợ </a> </li>
+        <li><a routerLink="/Users"> <i class="fa-solid fa-plus"></i> Quản lí User </a> </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <a (click)="btn_Out()"><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>Thoát</a>
+    </div>
+  </div>
+  <div class="col-md-10 pr-0">
+    <div class="row pt-5">
+      <div class="col">
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions1"></highcharts-chart>
+      </div>
+      <div class="col" *ngIf="showChart2">
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions2"></highcharts-chart>
+      </div>
+
+    </div>
+    <div class="row pt-5" *ngIf="showChart3">
+      <div class="col-3"></div>
+      <div class="col-1">
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions3"></highcharts-chart>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</div>
+<!--tren-->

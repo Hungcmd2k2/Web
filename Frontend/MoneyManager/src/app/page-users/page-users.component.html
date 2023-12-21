@@ -1,0 +1,80 @@
+<div class="loading" id="loadingpage">
+  <img src="assets/Image/loading.gif" alt="" />
+</div>
+
+<div class="row ">
+  <div class="col-md-2 pr-0 ">
+
+    <header><img src="assets/Image/Image_avatar.jpg" alt=""></header>
+    <div class="menu">
+        <ul>
+            <li><a routerLink="/HomePage"> <i class="fa-solid fa-house"></i>Quản lí giao dịch</a> </li>
+            <li><a onclick="ThongKe()" href="#"> <i class="fa-solid fa-chart-column"></i> Thống kê</a> </li>
+            <li><a href="#"> <i class="fa-solid fa-gear"></i> Cài Đặt </a> </li>
+            <li><a href="#"> <i class="fa-solid fa-phone"></i> Hỗ Trợ </a> </li>
+            <li><a href="#"> <i class="fa-solid fa-plus"></i> Quản lí User </a> </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <a href="#" (click)="btn_Out()"><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>Thoát</a>
+    </div>
+  </div>
+
+    <div class="col-md-10 ">
+
+      <div class="row">
+        <div class="banggiaodich">
+          <h4 style="padding-top: 30px;"> Danh sách tài khoản</h4>
+          <table class="table text-center">
+              <thead>
+                  <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Tên Đăng Nhập</th>
+                      <th scope="col">Mật Khẩu</th>
+                      <th scope="col">Họ Tên</th>
+                      <th scope="col">SĐT</th>
+                      <th scope="col">Địa Chỉ</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Hành Động</th>
+
+
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.username }}</td>
+                  <td>{{ user.password }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.phonenumber }}</td>
+                  <td>{{ user.address }}</td>
+                  <td>{{ user.email }}</td>
+                      <td>
+                          <div class="dropdown">
+                              <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  <i class="fa-solid fa-ellipsis  fa-2xl"></i>
+                              </a>
+
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#" (click)="onEditUsers(user.id,user.username,user.password,user.name,user.phonenumber,user.address,user.email)"><i
+                                              class="fa-solid fa-pen-nib pr-3"></i>Sửa</a></li>
+                                  <li><a class="dropdown-item" href="#" (click)="onDeleteUsers(user.id)"><i
+                                              class="fa-solid fa-trash pr-3"></i>Xoá</a></li>
+                              </ul>
+                          </div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+<!--tren-->
+    </div>
+
+
+</div>
+
+
